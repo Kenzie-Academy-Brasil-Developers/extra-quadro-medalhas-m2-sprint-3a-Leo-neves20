@@ -19,7 +19,7 @@ header > img{
 .container-pesquisa{
 
     background-color: var(--corGray-2);
-    height: 270px;
+    height: 211px;
 
 }
 
@@ -69,5 +69,66 @@ header > img{
     font-size: 1rem;
     font-weight: 400;
     color: white;
+
+}
+
+.container-tabela{
+
+
+    overflow-x: scroll;
+    transform: translateY(-58px);
+
+}
+
+table{
+
+    margin: 0 10px;
+    width: 1100px;
+    border-collapse: collapse;
+    padding-bottom: 10px;
+    margin-bottom: 20px
+
+}
+.posicao{
+    width: 160px;
+    height: 55px;
+    border-right: 1px solid var(--corGray-3);
+}
+
+.país{
+
+    width: 550px;
+    border-right: 1px solid var(--corGray-3);
+    color: white;
+    
+}
+
+.medalhas{
+
+    width: 160px;
+    border-right: 1px solid var(--corGray-3);
+
+}
+
+.total{
+
+    width: 120px;
+    color: white;
+    font-size: 14px;
+
+}
+th{
+
+    background-color: var(--corPrimaria-4);
+
+}
+
+th > button{
+
+    background-color: var(--corPrimaria-3);
+    padding: 7px 15px;
+    border-radius: 5px;
+    color: white;
+
 
 }
