@@ -10,7 +10,6 @@ export const criaCard = (posi,element) => {
     const bronze       = document.createElement("td")
     const total        = document.createElement("td")
 
-    linha.id = element.pais
     posicao.classList.add("posicaoTabela")
     bandeiraPais.classList.add("bandeiraPais")
     pais.classList.add("PaisTabela")

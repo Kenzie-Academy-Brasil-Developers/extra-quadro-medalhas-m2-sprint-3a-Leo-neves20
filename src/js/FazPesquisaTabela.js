@@ -15,8 +15,6 @@ const filtroPesquisa = async () => {
     
         if(event.target.tagName == "BUTTON"){
 
-            tabela.innerHTML = ""
-
             const api = await fetch(`${RequestApi.url}`, {
 
                 method: "GET",
@@ -33,7 +31,8 @@ const filtroPesquisa = async () => {
 
                     let {id,country, flag_url, medal_bronze, medal_gold, medal_silver} = element
 
-                        let totalMedal        = medal_bronze + medal_gold + medal_silver
+                        let totalMedal = medal_bronze + medal_gold + medal_silver
+
                         const paisesFormatado = {
 
                             pais: country,
@@ -49,6 +48,8 @@ const filtroPesquisa = async () => {
 
                         mensagemErro.classList.add("hidden")
 
+                        tabela.innerHTML = ""
+
                         tabela.appendChild(criaCard(id, paisesFormatado))
 
                         mensagemErro.innerText = ""
@@ -57,13 +58,14 @@ const filtroPesquisa = async () => {
 
                         mensagemErro.innerText = ""
 
+                        console.log(paisesFormatado)
+
                         tabela.appendChild(criaCard(id, paisesFormatado))
+
 
                     }else{
 
                         mensagemErro.innerText = "nome inavlido"
-
-                        tabela.appendChild(criaCard(id, paisesFormatado))
 
                     }
 

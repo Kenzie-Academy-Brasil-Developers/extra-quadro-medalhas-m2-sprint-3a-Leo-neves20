@@ -17,8 +17,11 @@ class RequestApi{
         .then(resp => {
 
             const tabela = document.querySelector(".listaInformacoes")
+            const paisesOrdem = []
 
             resp.forEach(element => {
+
+                
 
                 let {id,country, flag_url, medal_bronze, medal_gold, medal_silver} = element
 
@@ -35,11 +38,28 @@ class RequestApi{
 
                 }
 
-                tabela.appendChild(criaCard(id, paisesFormatado))
+                paisesOrdem.push(paisesFormatado)
+                
+            })
 
-                return resp
+            paisesOrdem.sort((a,b) => b.totalMedalhas - a.totalMedalhas)
+
+            paisesOrdem.sort((a,b) => {
+
+                if(a.totalMedalhas === b.totalMedalhas){
+
+                    return b.ouro - a.ouro
+
+                }
 
             })
+
+            paisesOrdem.forEach((element,i) => {
+
+                tabela.appendChild(criaCard(i + 1, element))  
+
+            })
+
 
         })
         .catch(err => console.log(err))
