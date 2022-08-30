@@ -34,7 +34,7 @@ const filtroPesquisa = async () => {
 
                     if(nomePaisFormatado == nomePesquisaFormatado){
 
-                        mensagemErro.classList.add("hidden")
+                        mensagemErro.innerText = ""
                         tabela.append(criaCard(i + 1, element))
 
                         return element
@@ -45,7 +45,7 @@ const filtroPesquisa = async () => {
 
                 if(buscaNomePaises.length == 0){
 
-                    mensagemErro.classList.remove("hidden")
+                    mensagemErro.innerText = "Nome inválido"
 
                 }
 
