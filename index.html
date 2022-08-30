@@ -21,10 +21,12 @@
                 <label for="pesquisaPais">Pesquisa</label>
 
                 <input type="text" name="pesquisaPais" placeholder="Pesquisar por país">
-                
-                <span>Ex: Brasil</span>
 
-                <button>Pesquisar</button>
+                <span class="mensagemErro"></span>
+                
+                <span>Ex: Brasil  obs: se quisar ver todos os paises novamente digite "todos"</span>
+
+                <button onclick="event.preventDefault()">Pesquisar</button>
 
             </form>
 
@@ -49,5 +51,6 @@
     </main>
     
     <script type="module" src="src/js/Request.js"></script>
+    <script type="module" src="src/js/FazPesquisaTabela.js"></script>
 </body>
 </html>

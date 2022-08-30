@@ -48,7 +48,7 @@ header > img{
     background-color: var(--corGray-1);
     border-radius: 8px;
     margin-top: 5px;
-    padding: 0.25rem 0px 0.25rem 1.75rem;
+    padding: 0.25rem 0px 0.25rem 2.3rem;
     
 }
 
@@ -76,7 +76,7 @@ header > img{
 
 
     overflow: auto;
-    transform: translateY(-58px);
+    transform: translateY(-34px);
 
 }
 
@@ -178,5 +178,17 @@ tr:nth-child(2n){
 .totalTabela{
 
     border: none;
+
+}
+
+.container-pesquisa > form > .mensagemErro{
+
+    color: red;
+
+}
+
+.hidden{
+
+    display: none;
 
 }
