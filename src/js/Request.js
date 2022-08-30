@@ -37,6 +37,8 @@ class RequestApi{
 
                 tabela.appendChild(criaCard(id, paisesFormatado))
 
+                return resp
+
             })
 
         })
@@ -48,5 +50,7 @@ class RequestApi{
     
 
 }
+
+export {RequestApi}
 
 RequestApi.PegaInformacao()
