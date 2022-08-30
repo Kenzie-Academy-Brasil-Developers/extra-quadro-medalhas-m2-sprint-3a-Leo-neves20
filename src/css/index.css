@@ -75,7 +75,7 @@ header > img{
 .container-tabela{
 
 
-    overflow-x: scroll;
+    overflow: auto;
     transform: translateY(-58px);
 
 }
@@ -89,17 +89,24 @@ table{
     margin-bottom: 20px
 
 }
+
+.listaInformacoes{
+
+    background-color: var(--corGray-1)
+
+}
+
 .posicao{
     width: 160px;
     height: 55px;
     border-right: 1px solid var(--corGray-3);
 }
 
-.país{
+.pais{
 
     width: 550px;
-    border-right: 1px solid var(--corGray-3);
     color: white;
+    border-right: 1px solid var(--corGray-3);
     
 }
 
@@ -107,6 +114,7 @@ table{
 
     width: 160px;
     border-right: 1px solid var(--corGray-3);
+    
 
 }
 
@@ -114,7 +122,7 @@ table{
 
     width: 120px;
     color: white;
-    font-size: 14px;
+    font-size: 0.87rem;
 
 }
 th{
@@ -130,5 +138,45 @@ th > button{
     border-radius: 5px;
     color: white;
 
+}
+
+.posicaoTabela, .medalhasTabela, .totalTabela{
+
+    text-align: center;
+    border-right: 1px solid var(--corGray-3);
+    color: #878787;
+    font-size: 0.87rem;
+    font-weight: 500;
+
+}
+
+tr:nth-child(2n){
+
+    background-color: var(--corGray-2);
+    
+}
+
+.PaisTabela{
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 20px 0px 20px 20px;
+    color: #878787;
+    font-weight: 500;
+    border-right: 1px solid var(--corGray-3);
+
+}
+
+.bandeiraPais{
+
+    width: 40px;
+    margin-right: 20px;
+
+}
+
+.totalTabela{
+
+    border: none;
 
 }
