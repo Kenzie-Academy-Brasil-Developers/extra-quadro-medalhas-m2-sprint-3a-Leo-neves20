@@ -181,10 +181,10 @@ tr:nth-child(2n){
 
 }
 
-.container-pesquisa > form > .mensagemErro{
+#mensagemErr{
 
     color: red;
-
+   
 }
 
 .hidden{
@@ -192,3 +192,4 @@ tr:nth-child(2n){
     display: none;
 
 }
+

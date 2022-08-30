@@ -1,19 +1,19 @@
 import { criaCard } from "./criaCardLista.js"
+import { ordenaLista } from "./ordenaLista.js"
 import { RequestApi } from "./Request.js"
 
 const formPesquisa = document.querySelector("form")
 const tabela       = document.querySelector(".listaInformacoes")
 const inputValue   = document.querySelector("input")
-const mensagemErro = document.querySelector(".mensagemErro")
-
-
+const mensagemErro = document.getElementById("mensagemErr")
 
 const filtroPesquisa = async () => {
 
     formPesquisa.addEventListener("click", async (event) => {
 
-    
         if(event.target.tagName == "BUTTON"){
+
+            tabela.innerHTML = ""
 
             const api = await fetch(`${RequestApi.url}`, {
 
@@ -24,48 +24,36 @@ const filtroPesquisa = async () => {
             .then(resp => resp.json())
             .then(resp => {
 
-                resp.forEach(element => {
+                const listaPaises = ordenaLista(resp)
 
-                    let nomePaisFormatado     = element.country.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-                    let nomePesquisaFormatado = inputValue.value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                let nomePesquisaFormatado = inputValue.value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
-                    let {id,country, flag_url, medal_bronze, medal_gold, medal_silver} = element
+                const buscaNomePaises = listaPaises.filter((element, i) => {
 
-                        let totalMedal = medal_bronze + medal_gold + medal_silver
-
-                        const paisesFormatado = {
-
-                            pais: country,
-                            bandeira: flag_url,
-                            ouro: medal_gold,
-                            prata: medal_silver,
-                            bronze: medal_bronze,
-                            totalMedalhas: totalMedal
-
-                        }
+                    let nomePaisFormatado = element.pais.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
                     if(nomePaisFormatado == nomePesquisaFormatado){
 
                         mensagemErro.classList.add("hidden")
+                        tabela.append(criaCard(i + 1, element))
 
-                        tabela.innerHTML = ""
+                        return element
 
-                        tabela.appendChild(criaCard(id, paisesFormatado))
+                    }
+                        
+                })
 
-                        mensagemErro.innerText = ""
-                       
-                    }else if(nomePesquisaFormatado === "todos"){
+                if(buscaNomePaises.length == 0){
 
-                        mensagemErro.innerText = ""
+                    mensagemErro.classList.remove("hidden")
 
-                        console.log(paisesFormatado)
+                }
 
-                        tabela.appendChild(criaCard(id, paisesFormatado))
+                const bustaTodosPises = listaPaises.forEach((element, i) => {
 
+                    if(nomePesquisaFormatado == "todos"){
 
-                    }else{
-
-                        mensagemErro.innerText = "nome inavlido"
+                        tabela.append(criaCard(i + 1, element))
 
                     }
 
