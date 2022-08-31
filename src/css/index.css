@@ -1,0 +1,327 @@
+
+header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.81rem;
+    background-color: var(--corPrimaria-3);
+    
+}
+
+header > img{
+
+    width: 6.87;
+    margin: auto 0;
+    
+}
+
+.container-pesquisa{
+
+    background-color: var(--corGray-2);
+    height: 211px;
+
+}
+
+.container-pesquisa > form{
+
+    display: flex;
+    width: 94%;
+    flex-direction: column;
+    margin: 0px auto;
+
+}
+
+.container-pesquisa > form > .input{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container-pesquisa > form > .input > label{
+
+    margin-top: 10px;
+    margin-left: 5px;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+}
+
+.container-pesquisa > form > .input > input{
+
+    height: 35px;
+    background: url(/src/assets/iconPesquisa.png) no-repeat 2% center;
+    background-size: 1rem;
+    background-color: var(--corGray-1);
+    border-radius: 8px;
+    margin-top: 5px;
+    padding: 0.25rem 0px 0.25rem 2.3rem;
+    
+}
+
+.container-pesquisa > form > .input > span{
+
+    font-size: 0.68rem;
+    color: var(--corGray-3);
+    margin-top: 7px;
+    margin-left: 5px;
+
+}
+
+.container-pesquisa > form > button{
+
+    background-color: var(--corPrimaria-4);
+    margin-top: 10px;
+    height: 35px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+
+}
+
+.container-tabela{
+
+
+    overflow: auto;
+    transform: translateY(-34px);
+
+}
+
+table{
+
+    margin: 0 10px;
+    width: 1100px;
+    border-collapse: collapse;
+    padding-bottom: 10px;
+    margin-bottom: 20px
+
+}
+
+.listaInformacoes{
+
+    background-color: var(--corGray-1)
+
+}
+
+.posicao{
+    width: 160px;
+    height: 55px;
+    border-right: 1px solid var(--corGray-3);
+}
+
+.pais{
+
+    width: 550px;
+    color: white;
+    border-right: 1px solid var(--corGray-3);
+    
+}
+
+.medalhas{
+
+    width: 160px;
+    border-right: 1px solid var(--corGray-3);
+    
+
+}
+
+.total{
+
+    width: 120px;
+    color: white;
+    font-size: 0.87rem;
+
+}
+th{
+
+    background-color: var(--corPrimaria-4);
+
+}
+
+th > button{
+
+    background-color: var(--corPrimaria-3);
+    padding: 7px 15px;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.posicaoTabela, .medalhasTabela, .totalTabela{
+
+    text-align: center;
+    border-right: 1px solid var(--corGray-3);
+    color: #878787;
+    font-size: 0.87rem;
+    font-weight: 500;
+
+}
+
+tr:nth-child(2n){
+
+    background-color: var(--corGray-2);
+    
+}
+
+.PaisTabela{
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 20px 0px 20px 20px;
+    color: #878787;
+    font-weight: 500;
+    border-right: 1px solid var(--corGray-3);
+
+}
+
+.bandeiraPais{
+
+    width: 40px;
+    margin-right: 20px;
+
+}
+
+.totalTabela{
+
+    border: none;
+
+}
+
+#mensagemErr{
+
+    font-size: 0.68rem;
+    color: red;
+   
+}
+
+.hidden{
+
+    display: none;
+
+}
+
+@media (min-width: 600px){
+
+    .container-pesquisa > form{
+
+        flex-direction: row;
+        align-items: center;
+    
+    }
+
+    .container-pesquisa > form > .input > label{
+
+        font-size: 0.8rem;
+
+    }
+
+    .container-pesquisa > form > button{
+
+        width: 20%;
+        margin: 0px 0px -4px 10px;
+        
+    }
+
+    .container-tabela{
+
+        transform: translateY(-77px);
+
+    }
+
+    @media (min-width: 800px){
+
+        .container-pesquisa > form > .input > input{
+
+            height: 40px;
+            
+
+        }
+
+        .container-pesquisa > form > button{
+
+            width: 140px;
+            height: 40px;
+
+        }
+
+        .container-pesquisa > form > .input > span{
+
+            font-size: 0.78rem;
+
+        }
+
+    }
+
+    @media (min-width: 1100px){
+
+        main{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .container-pesquisa{
+
+            width: 100%;
+
+        }
+
+        .container-pesquisa > form > .input > label {
+
+            font-size: 1rem;
+
+        }
+
+        .container-pesquisa > form > button{
+
+            height: 45px;
+            width: 140px;
+            margin: 0px 0px -8px 10px;
+
+        }
+
+        .container-pesquisa > form > .input > input{
+
+            height: 45px;
+            
+        }
+
+        .container-tabela{
+
+            transform: translateY(-67px);
+
+        }
+
+        .posicao{
+
+            height: 65px;
+
+        }
+
+        th > button{
+
+            font-size: 1rem;
+
+        }
+
+    }
+
+    @media (min-width: 1200px){
+
+        table{
+
+            width: 1300px;
+
+        }
+
+    }
+
+}
+

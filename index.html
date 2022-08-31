@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <title>Quadro De Medalhas</title>
+</head>
+<body>
+    <header>
+        <img src="src/assets/fotoHeader.png" alt="Logo do site">
+    </header>
+    <main>
+        <section class="container-pesquisa">
+
+            <form>
+            
+                <div class="input">
+                    <label for="pesquisaPais">Pesquisa</label>
+
+                    <input type="text" name="pesquisaPais" placeholder="Pesquisar por país">
+
+                    <span>Ex: Brasil  obs: se quiser ver todos os países novamente, digite "todos"</span>
+
+                    <span id="mensagemErr"></span>
+
+                </div>
+                
+                <button onclick="event.preventDefault()">Pesquisar</button>
+
+            </form>
+
+        </section>
+        <section class="container-tabela">
+            <table>
+                <thead>
+                    <tr id="headerTabela">
+                    
+                        <th class="posicao"><button id="posicao">Posição  &#709</button></th>
+                        <th class="pais" >País</th>
+                        <th class="medalhas"><button id="ouro">Ouro  &#709</button></th>
+                        <th class="medalhas"><button id="prata">Prata  &#709</button></th>
+                        <th class="medalhas"><button id="bronze" >Bronze  &#709</button></th>
+                        <th class="total">Total</th>    <!-- &#708; -->  
+                        
+                    </tr>
+                </thead>
+                <tbody class="listaInformacoes">
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+    
+    <script type="module" src="src/js/Request.js"></script>
+    <script type="module" src="src/js/FazPesquisaTabela.js"></script>
+</body>
+</html>
