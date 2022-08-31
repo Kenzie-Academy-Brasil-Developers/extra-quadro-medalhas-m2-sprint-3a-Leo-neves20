@@ -28,6 +28,7 @@ const filtroPesquisa = async () => {
 
                 let nomePesquisaFormatado = inputValue.value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
+
                 const buscaNomePaises = listaPaises.filter((element) => {
 
                     let nomePaisFormatado = element.pais.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")

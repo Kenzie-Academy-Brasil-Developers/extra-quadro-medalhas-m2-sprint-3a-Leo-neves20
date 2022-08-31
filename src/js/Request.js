@@ -1,12 +1,14 @@
 
 import { criaCard } from "./criaCardLista.js"
 import { EventosBtnTabela } from "./eventoBtnTabela.js"
+
 import { ordenaLista } from "./ordenaLista.js"
 
 class RequestApi{
 
     static url     = "https://kenzie-olympics.herokuapp.com/paises"
     static headers = {"Content-Type": "application/json"}
+
 
     static async RenderizaLista(){
 
@@ -136,7 +138,7 @@ class RequestApi{
                     listaOrdenada.forEach(element => {tabela.append(criaCard(element))})
 
                 }
-
+        
             })
             
         })
@@ -157,3 +159,4 @@ class RequestApi{
 export {RequestApi}
 
 RequestApi.RenderizaLista()
+

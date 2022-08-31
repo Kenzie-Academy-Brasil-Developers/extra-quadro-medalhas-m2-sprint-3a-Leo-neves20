@@ -18,6 +18,7 @@ function ordenaLista(arr){
     arrOrdenado.forEach((element) => {
 
         let {country, flag_url, medal_bronze, medal_gold, medal_silver, totalMedalhas} = element
+
         const paisesFormatado = {
 
             pais: country,
