@@ -32,15 +32,24 @@ header > img{
 
 }
 
-.container-pesquisa > form > label{
+.container-pesquisa > form > .input{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container-pesquisa > form > .input > label{
 
     margin-top: 10px;
+    margin-left: 5px;
+
     font-size: 0.75rem;
     font-weight: bold;
 
 }
 
-.container-pesquisa > form > input{
+.container-pesquisa > form > .input > input{
 
     height: 35px;
     background: url(/src/assets/iconPesquisa.png) no-repeat 2% center;
@@ -52,11 +61,12 @@ header > img{
     
 }
 
-.container-pesquisa > form > span{
+.container-pesquisa > form > .input > span{
 
     font-size: 0.68rem;
     color: var(--corGray-3);
     margin-top: 7px;
+    margin-left: 5px;
 
 }
 
@@ -183,6 +193,7 @@ tr:nth-child(2n){
 
 #mensagemErr{
 
+    font-size: 0.68rem;
     color: red;
    
 }
@@ -190,6 +201,127 @@ tr:nth-child(2n){
 .hidden{
 
     display: none;
+
+}
+
+@media (min-width: 600px){
+
+    .container-pesquisa > form{
+
+        flex-direction: row;
+        align-items: center;
+    
+    }
+
+    .container-pesquisa > form > .input > label{
+
+        font-size: 0.8rem;
+
+    }
+
+    .container-pesquisa > form > button{
+
+        width: 20%;
+        margin: 0px 0px -4px 10px;
+        
+    }
+
+    .container-tabela{
+
+        transform: translateY(-77px);
+
+    }
+
+    @media (min-width: 800px){
+
+        .container-pesquisa > form > .input > input{
+
+            height: 40px;
+            
+
+        }
+
+        .container-pesquisa > form > button{
+
+            width: 140px;
+            height: 40px;
+
+        }
+
+        .container-pesquisa > form > .input > span{
+
+            font-size: 0.78rem;
+
+        }
+
+    }
+
+    @media (min-width: 1100px){
+
+        main{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .container-pesquisa{
+
+            width: 100%;
+
+        }
+
+        .container-pesquisa > form > .input > label {
+
+            font-size: 1rem;
+
+        }
+
+        .container-pesquisa > form > button{
+
+            height: 45px;
+            width: 140px;
+            margin: 0px 0px -8px 10px;
+
+        }
+
+        .container-pesquisa > form > .input > input{
+
+            height: 45px;
+            
+        }
+
+        .container-tabela{
+
+            transform: translateY(-67px);
+
+        }
+
+        .posicao{
+
+            height: 65px;
+
+        }
+
+        th > button{
+
+            font-size: 1rem;
+
+        }
+
+    }
+
+    @media (min-width: 1200px){
+
+        table{
+
+            width: 1300px;
+
+        }
+
+    }
 
 }
 

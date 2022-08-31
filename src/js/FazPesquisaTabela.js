@@ -28,16 +28,17 @@ const filtroPesquisa = async () => {
 
                 let nomePesquisaFormatado = inputValue.value.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
-                const buscaNomePaises = listaPaises.filter((element, i) => {
+
+                const buscaNomePaises = listaPaises.filter((element) => {
 
                     let nomePaisFormatado = element.pais.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
                     if(nomePaisFormatado == nomePesquisaFormatado){
 
-                        mensagemErro.classList.add("hidden")
-                        tabela.append(criaCard(i + 1, element))
+                        mensagemErro.innerText = ""
+                        tabela.append(criaCard(element))
 
-                        return element
+                        return element 
 
                     }
                         
@@ -45,16 +46,17 @@ const filtroPesquisa = async () => {
 
                 if(buscaNomePaises.length == 0){
 
-                    mensagemErro.classList.remove("hidden")
+                    mensagemErro.innerText = "Nome inválido"
 
                 }
 
-                const bustaTodosPises = listaPaises.forEach((element, i) => {
+                const bustaTodosPises = listaPaises.forEach((element) => {
 
                     if(nomePesquisaFormatado == "todos"){
 
-                        tabela.append(criaCard(i + 1, element))
-
+                        mensagemErro.innerText = ""
+                        tabela.append(criaCard(element))
+                    
                     }
 
                 })

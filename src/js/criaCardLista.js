@@ -1,5 +1,5 @@
 
-export const criaCard = (posi,element) => {
+export const criaCard = (element) => {
 
     const linha        = document.createElement("tr")
     const posicao      = document.createElement("td")
@@ -18,7 +18,7 @@ export const criaCard = (posi,element) => {
     bronze.classList.add("medalhasTabela")
     total.classList.add("totalTabela")
 
-    posicao.innerText = `${posi}º`
+    posicao.innerText = `${element.id}º`
     bandeiraPais.src  = element.bandeira
     bandeiraPais.alt  = `bandeira do(a) ${element.pais} `
     pais.innerText    = element.pais
