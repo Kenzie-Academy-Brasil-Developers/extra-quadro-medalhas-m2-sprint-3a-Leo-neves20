@@ -1,0 +1,27 @@
+:root{
+
+    --corPrimaria-1: #939EDF;
+    --corPrimaria-2: #4A60CC;
+    --corPrimaria-3: #4058CA;
+    --corPrimaria-4: #364fc7;
+
+    --corGray-1: #F8F9FA;
+    --corGray-2: #E9ECEF;
+    --corGray-3: #868E96;
+    --corGray-4: #000000;
+
+    --font:'Poppins', sans-serif;
+
+}
+
+
+body, header, section, div, label, input,span, button, form{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    outline: none;
+    border: none;
+
+}
